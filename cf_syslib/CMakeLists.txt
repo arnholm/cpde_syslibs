@@ -12,7 +12,9 @@ endif()
 #--------------------------------------------------------------------------------
 
 set(PUBLIC_HEAD_FILES
+   recursive_file_search.h
    replace_substring.h
+   std_filename.h
    string_trim.h
    stringtokens.h
    xml_node.h
@@ -21,7 +23,9 @@ set(PUBLIC_HEAD_FILES
 )
 
 set(SOURCE_FILES
+   recursive_file_search.cpp
    replace_substring.cpp
+   std_filename.cpp
    string_trim.cpp
    stringtokens.cpp
    xml_node.cpp
