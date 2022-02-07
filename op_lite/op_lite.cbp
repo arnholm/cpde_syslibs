@@ -81,7 +81,7 @@
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
-					<Add option="-std=c++0x" />
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 					<Add option="-W" />
 					<Add option="-fPIC" />
@@ -91,7 +91,6 @@
 					<Add option="-D_7ZIP_ST" />
 				</Compiler>
 				<Linker>
-					<Add library="msgpackc" />
 					<Add library="dl" />
 				</Linker>
 				<ExtraCommands>
@@ -108,7 +107,7 @@
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-Os" />
-					<Add option="-std=c++0x" />
+					<Add option="-std=c++11" />
 					<Add option="-W" />
 					<Add option="-fPIC" />
 					<Add option="-fexceptions" />
@@ -116,7 +115,6 @@
 					<Add option="-D_7ZIP_ST" />
 				</Compiler>
 				<Linker>
-					<Add library="msgpackc" />
 					<Add library="dl" />
 				</Linker>
 				<ExtraCommands>
