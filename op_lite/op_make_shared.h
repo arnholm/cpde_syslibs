@@ -31,7 +31,7 @@ std::shared_ptr<T> op_make_shared(op_database* db, IDint64 id)
 template <typename T>
 inline std::shared_ptr<T> op_make_shared(const op_pid& id)
 {
-   return op_make_shared(id.table().db(),id.id());
+   return op_make_shared(id.table()->db(),id.id());
 }
 
 
