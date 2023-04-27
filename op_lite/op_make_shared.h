@@ -3,8 +3,8 @@
 
 #include <memory>
 #include <stdexcept>
-#include "op_database.h"
 #include "op_value.h"
+#include "sqDatabase.h"
 
 // op_make_shared: Restore a persistent op_lite object from a database as a std::shared_ptr
 //
