@@ -16,18 +16,23 @@
 //        op_make_shared is safe to use, while op_ptr does NOT support multiple threads.
 
 template <typename T>
-std::shared_ptr<T> op_make_shared(const op_pid& id)
+std::shared_ptr<T> op_make_shared(op_database* db, IDint64 id)
 {
-   // database is found from pid
-   op_database* db = id.table()->db();
    if(db == nullptr) throw std::runtime_error("op_make_shared: cannot restore object from NULL database");
 
    // TODO: when type factory is in database, make proper
    // polymorphic type here. For now we just create non-polymorphic type
    auto obj = std::make_shared<T>();
-   db->restore_persistent(id.id(),obj.get());
-
+   db->restore_persistent(id,obj.get());
    return obj;
 }
+
+
+template <typename T>
+inline std::shared_ptr<T> op_make_shared(const op_pid& id)
+{
+   return op_make_shared(id.table().db(),id.id());
+}
+
 
 #endif // OP_MAKE_SHARED_H
