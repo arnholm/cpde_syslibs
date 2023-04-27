@@ -28,6 +28,7 @@
 					<Add option="/D_CRT_SECURE_NO_WARNINGS" />
 					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
 					<Add option="/D_CRT_SECURE_DEPRECATE" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add option="`$(CPDE_USR)\bin\wx-config.exe  --prefix=$(#wx) --wxcfg=$(#wx.debug) --iso --libs`" />
@@ -60,6 +61,7 @@
 					<Add option="/D_CRT_SECURE_NO_WARNINGS" />
 					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
 					<Add option="/D_CRT_SECURE_DEPRECATE" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add option="`$(CPDE_USR)\bin\wx-config.exe  --prefix=$(#wx) --wxcfg=$(#wx.release) --iso --libs`" />
@@ -89,6 +91,7 @@
 					<Add option="-DNOPCH" />
 					<Add option="-D_DEBUG" />
 					<Add option="-D_7ZIP_ST" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add library="dl" />
@@ -113,6 +116,7 @@
 					<Add option="-fexceptions" />
 					<Add option="-DNOPCH" />
 					<Add option="-D_7ZIP_ST" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add library="dl" />
@@ -209,6 +213,8 @@
 		<Unit filename="op_database_helper.cpp" />
 		<Unit filename="op_database_helper.h" />
 		<Unit filename="op_lite_config.h" />
+		<Unit filename="op_make_shared.cpp" />
+		<Unit filename="op_make_shared.h" />
 		<Unit filename="op_manager.cpp" />
 		<Unit filename="op_manager.h" />
 		<Unit filename="op_map.cpp">
@@ -319,10 +325,7 @@
 		<Unit filename="sqlite3/sqlite3.h" />
 		<Unit filename="sqlite3/sqlite3ext.h" />
 		<Extensions>
-			<code_completion />
-			<envvars />
 			<lib_finder disable_auto="1" />
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
